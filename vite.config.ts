@@ -12,7 +12,7 @@ export default defineConfig({
     hmr: {
       overlay: true,
     },
-    open: true,
+    open: false, // 如果程序跑不起来就关闭自动打开浏览器
   },
   ...buildConfig,
   resolve: {
