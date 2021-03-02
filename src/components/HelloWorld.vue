@@ -5,7 +5,7 @@
   <button @click="jump('kong', false)">路由跳转到about</button>
   <button @click="jump('kong', true)" style="margin-left:10px">路由跳转到about2</button>
   <button @click="shuchu" style="margin-left:10px">输出</button>
-  <button @click="tiao" style="margin-left:10px">跳转到new</button>
+  <button @click="tiao" style="margin-left:10px">跳转到tsx页面</button>
 </template>
 
 <script lang="ts">
