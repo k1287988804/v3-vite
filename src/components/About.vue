@@ -28,7 +28,7 @@ export default defineComponent({
       })
 
       const router = useRouter()
-      const getValue = (str: string) => {
+      const getValue = (str: string):void => {
           state.value = str
       }
 

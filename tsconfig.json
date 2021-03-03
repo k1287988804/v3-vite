@@ -15,7 +15,8 @@
           "/@/*": [
               "src/*"
           ]
-      }
+      },
+      "noImplicitAny": false, // 解决ts文件导入js模块找不到的问题
   },
   "include": [
       "src/**/*.ts",

@@ -20,7 +20,6 @@ export default defineComponent({
 				<div>{state.age}</div>
 				<input v-model={state.age}/>
 				<button class='a' onClick={hehe}>点我有好事发生</button>
-				{[<span>111</span>,<span>222</span>,<img alt='666'/>]}
 			</Fragment>
 		)
 	}

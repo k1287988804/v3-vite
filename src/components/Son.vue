@@ -1,5 +1,5 @@
 <template> 
-    <button @click="sendValue">传值</button>
+    <button style="margin-top: 10px;" @click="sendValue">传值</button>
 </template>
 
 <script lang='ts'>
@@ -31,7 +31,7 @@ export default defineComponent({
     })
 
     const sendValue = () => {
-        emit('getValue', 'hehe接收到了')
+        emit('getValue', '接收到了')
     }
     return {
         sendValue

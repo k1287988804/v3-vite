@@ -22,6 +22,21 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("/@/components/About2.vue")
     },
     {
+        path: "/about3",
+        name: "About3",
+        component: () => import("/@/components/About3.vue")
+    },
+    {
+        path: "/about4",
+        name: "About4",
+        component: () => import("/@/components/About4.vue")
+    },
+    {
+        path: "/about5",
+        name: "About5",
+        component: () => import("/@/components/About5.tsx")
+    },
+    {
         path: "/new",
         name: "New",
         component: () => import("/@/components/new.tsx")

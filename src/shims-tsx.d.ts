@@ -1,7 +1,6 @@
-
 declare module "vue/types/options" {
 
-    interface ComponentOptions<V extends Vue> {
+    interface ComponentOptions {
 
         [propName: string]: any;
 

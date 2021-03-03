@@ -18,9 +18,9 @@ export default defineComponent({
       const state = reactive({
           name: '',
           value: "暂时未收到子组件传过来的值！",
-          num: 0,
+          haoshi: "好事发生了~~~~~",
           colorGreen: 'green',
-          elArr: [1,2,3,4,5],
+          elArr: ['vue','react','angular','vuex','jsx','redux'],
       })
 
       const router = useRouter()
@@ -28,8 +28,8 @@ export default defineComponent({
           state.value = str
       }
       const fun = () => {
-        state.num ++
-        console.log('好事发生了')
+        state.haoshi = state.haoshi.slice(1, 10) + state.haoshi[0]
+        console.log('好事发生了~~~~~')
       }
 
       onMounted(()=>{
@@ -40,8 +40,10 @@ export default defineComponent({
       const newcom = () => <>
         <h1 class="colorGreen">{state.name}</h1>
         <button onClick={fun}>点我有好事发生</button>
-        <p>{state.num}</p>
-        {state.elArr.map(item => <span style={{color: 'red'}}>{item}</span>)}
+        <p style="margin-top: 10px">{state.haoshi}</p>
+        <ul style="margin: 10px auto">
+          {state.elArr.map(item => <li style={{color: 'red', listStyle: 'none'}}>{item}</li>)}
+        </ul>
       </>
 
       return () => newcom()
