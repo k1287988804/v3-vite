@@ -49,6 +49,7 @@
         jump,
         jump3,
         jump4,
+        jump5,
         tiao,
         inCrement: () => store.commit('increment')
       }

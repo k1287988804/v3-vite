@@ -45,6 +45,9 @@ export default {
 
         // 逻辑3
         const { money, sM} = useSend()
+
+        console.log(id)    
+        console.log(table)
         
         return {
             id,

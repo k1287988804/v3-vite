@@ -1,22 +1,23 @@
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, reactive, toRefs } from 'vue'
 import { getMockData } from '/@/api/server'
 
 export default function useTable(){
-    const id = ref<number>(1)
-    const table = ref<Object[]>([])
+    // const id = ref<number>(1)
+    // const table = ref<Object[]>([])
+
+    const state = reactive({
+        id: 1,
+        table: []
+    })
 
     const getMD = async () => {
-        const { data } = await getMockData({id: id.value})
-        table.value = data
+        const { data } = await getMockData({id: state})
+        state.table = data
     }
 
-    watch(id, (newVal, oldVal) => getMD())
+    watch(() => state.id, (newVal, oldVal) => getMD())
 
     onMounted(() => getMD())
 
-    return {
-        id,
-        table,
-        getMD
-    }
+    return toRefs(state)
 }
