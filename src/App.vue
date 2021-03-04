@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img alt="Vue logo" src="./assets/logo.png" @click="jumpHome"/>
   <router-view />
 </template>
 
@@ -9,6 +9,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'App',
+  methods: {
+    jumpHome(){
+      this.$router.push("/")
+    }
+  }
 })
 </script>
 
