@@ -11,7 +11,7 @@ export default function useTable(){
     })
 
     const getMD = async () => {
-        const { data } = await getMockData({id: state})
+        const { data } = await getMockData({id: state.id})
         state.table = data
     }
 

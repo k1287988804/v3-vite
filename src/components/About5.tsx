@@ -28,12 +28,12 @@ export default defineComponent({
                         </tr>
                     </thead>
                     {table.value.map(item => {
-                        return <>
+                        return <tr>
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>{item.age}</td>
                             <td>{item.love}</td>
-                        </>
+                        </tr>
                     })}
                 </table>
                 <input v-model={search.value} placeholder="请输入查询的姓名"/>
